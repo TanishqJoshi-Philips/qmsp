@@ -1,0 +1,348 @@
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 12px;
+  overflow: auto;
+}
+
+.modal-container.multi-step {
+  display: flex;
+  max-width: 900px;
+  width: 100%;
+  max-height: 95vh;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+  position: relative;
+  animation: modalSlideIn 0.2s;
+  overflow: hidden;
+}
+
+@keyframes modalSlideIn {
+  from { opacity: 0; transform: translateY(-30px) scale(0.98);}
+  to   { opacity: 1; transform: translateY(0) scale(1);}
+}
+
+.modal-sidebar {
+  width: 220px;
+  min-width: 180px;
+  max-width: 240px;
+  background: #f8fafc;
+  border-right: 1.5px solid #e2e8f0;
+  padding: 32px 0 32px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  overflow-y: auto;
+  max-height: 95vh;
+}
+
+.modal-sidebar ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.modal-sidebar li {
+  font-size: 16px;
+  color: #64748b;
+  margin-bottom: 24px;
+  padding-left: 0;
+  position: relative;
+  transition: color 0.2s;
+}
+
+.modal-sidebar li.active {
+  color: #2563eb;
+  font-weight: 600;
+}
+
+.modal-sidebar li.completed {
+  color: #22c55e;
+}
+
+.modal-content {
+  flex: 1;
+  padding: 32px 32px 24px 32px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-width: 0;
+  overflow-y: auto;
+  max-height: 95vh;
+}
+
+.step-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 18px;
+}
+
+label {
+  display: block;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 18px;
+}
+
+.form-input,
+.form-textarea,
+.form-select {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 16px;
+  background: #f9fafb;
+  margin-top: 6px;
+  margin-bottom: 12px;
+  transition: border-color 0.2s;
+}
+
+.form-input:focus,
+.form-textarea:focus,
+.form-select:focus {
+  border-color: #2563eb;
+  outline: none;
+}
+
+.form-textarea {
+  min-height: 60px;
+  resize: vertical;
+}
+
+.form-select {
+  cursor: pointer;
+}
+
+.helper-text {
+  font-size: 13px;
+  color: #64748b;
+  margin-left: 2px;
+}
+
+.required {
+  color: #e11d48;
+  margin-left: 2px;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 24px;
+  flex-shrink: 0;
+}
+
+.btn-cancel,
+.btn-next,
+.btn-create {
+  padding: 10px 22px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  border: 2px solid transparent;
+  margin-left: 0;
+}
+
+.btn-cancel {
+  background: #f3f4f6;
+  color: #374151;
+  border-color: #e2e8f0;
+}
+
+.btn-cancel:hover {
+  background: #e5e7eb;
+}
+
+.btn-next,
+.btn-create {
+  background: #2563eb;
+  color: #fff;
+  border-color: #2563eb;
+}
+
+.btn-next:disabled,
+.btn-create:disabled {
+  background: #cbd5e1;
+  border-color: #cbd5e1;
+  color: #fff;
+  cursor: not-allowed;
+}
+
+.btn-next:hover:enabled,
+.btn-create:hover:enabled {
+  background: #1d4ed8;
+  border-color: #1d4ed8;
+}
+
+.close-button {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  background: none;
+  border: none;
+  color: #64748b;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 6px;
+  transition: background 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.close-button:hover {
+  background: #f1f5f9;
+}
+
+/* --- Table Styles --- */
+.supporting-docs-table,
+.processes-table-wrapper,
+.catalog-table,
+.activities-table {
+  margin-bottom: 16px;
+  overflow-x: auto;
+}
+
+.supporting-docs-table table,
+.processes-table,
+.catalog-table,
+.activities-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 15px;
+  background: #fff;
+}
+
+.supporting-docs-table th,
+.supporting-docs-table td,
+.processes-table th,
+.processes-table td,
+.catalog-table th,
+.catalog-table td,
+.activities-table th,
+.activities-table td {
+  border: 1px solid #e2e8f0;
+  padding: 8px 10px;
+  text-align: left;
+}
+
+.processes-table th,
+.catalog-table th,
+.activities-table th,
+.supporting-docs-table th {
+  background: #f8fafc;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.processes-table tr:nth-child(even),
+.catalog-table tr:nth-child(even),
+.activities-table tr:nth-child(even),
+.supporting-docs-table tr:nth-child(even) {
+  background: #f4f8fb;
+}
+
+.processes-table input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+}
+
+.catalog-table input,
+.activities-table input,
+.supporting-docs-table input {
+  width: 100%;
+  padding: 4px 6px;
+  font-size: 14px;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  background: #f9fafb;
+}
+
+/* Add/Remove Buttons */
+.add-doc-btn,
+.remove-doc-btn,
+.add-activity-btn,
+.remove-activity-btn {
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  padding: 4px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  margin: 0 2px;
+}
+.remove-doc-btn,
+.remove-activity-btn {
+  background: #e11d48;
+}
+.add-doc-btn:hover,
+.add-activity-btn:hover {
+  background: #1d4ed8;
+}
+.remove-doc-btn:hover,
+.remove-activity-btn:hover {
+  background: #be123c;
+}
+
+/* Responsive: Modal always fits viewport */
+@media (max-width: 900px) {
+  .modal-container.multi-step {
+    flex-direction: column;
+    max-width: 98vw;
+    min-width: 0;
+    max-height: 98vh;
+  }
+  .modal-sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1.5px solid #e2e8f0;
+    flex-direction: row;
+    padding: 16px 0 16px 16px;
+    overflow-x: auto;
+    max-height: 120px;
+  }
+  .modal-sidebar ol {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+  }
+  .modal-sidebar li {
+    margin-bottom: 0;
+    min-width: 140px;
+  }
+  .modal-content {
+    padding: 20px 8px 16px 8px;
+    max-height: 70vh;
+  }
+}
+
+@media (max-width: 600px) {
+  .modal-content {
+    padding: 10px 2px 8px 2px;
+    max-height: 60vh;
+  }
+  .step-title {
+    font-size: 16px;
+  }
+  .modal-footer {
+    flex-direction: column-reverse;
+    gap: 8px;
+  }
+  .btn-cancel,
+  .btn-next,
+  .btn-create {
+    width: 100%;
+  }
+}

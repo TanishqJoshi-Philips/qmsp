@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import React, { useState } from 'react';
-import './ProcessesPage.css';
+import '../css/ProcessesPage.css';
 
 const ProcessesPage: React.FC = () => {
   const [activeSection, setActiveSection] = useState<string>('all');

@@ -1,8 +1,8 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import HomePage from './HomePage';
-import ProcessesPage from './ProcessesPage'; 
-import DocumentsPage from './DocumentsPage';
+import HomePage from './components/HomePage';
+import ProcessesPage from './components/ProcessesPage'; 
+import DocumentsPage from './components/DocumentsPage';
 
 const FavoritesPage: React.FC = () => (
 <div style={{ padding: 40 }}>My Favorites Page</div>

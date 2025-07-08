@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import React, { useState } from 'react';
-import './DocumentsPage.css';
+import '../css/DocumentsPage.css';
 
 const DocumentsPage: React.FC = () => {
   const [selectedDocument, setSelectedDocument] = useState<string>('');

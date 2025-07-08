@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import React, { useState } from 'react';
-import './HomePage.css';
-import CreateChangePlanModal from './CreateChangePlanModal';
+import '../css/HomePage.css';
+import CreateChangePlanModal from '../components/CreateChangePlanModal';
 
 const HomePage: React.FC = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);

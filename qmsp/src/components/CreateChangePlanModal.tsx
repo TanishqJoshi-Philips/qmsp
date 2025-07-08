@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import './CreateChangePlanModal.css';
+import '../css/CreateChangePlanModal.css';
 
-/** --- Types --- */
 interface SupportingDoc {
   id: string;
   version: string;
@@ -45,7 +44,7 @@ interface ActivityRow {
   duration: string;
 }
 
-/** --- Step 1: Change Plan Details --- */
+/* Step 1: Change Plan Details */
 const ChangePlanDetailsForm: React.FC<{
   data: Partial<ChangePlanDetailsData>;
   onChange: (data: Partial<ChangePlanDetailsData>) => void;

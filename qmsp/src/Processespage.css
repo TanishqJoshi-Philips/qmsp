@@ -296,7 +296,6 @@ body {
     min-height: 80px;
     font-size: 14px;
   }
-  
   .header {
     padding: 12px 16px;
   }
@@ -439,4 +438,8 @@ body {
   .sidebar-item.quick-access {
     display: none;
   }
+  
 }
+span{
+    text-align: left;
+  }

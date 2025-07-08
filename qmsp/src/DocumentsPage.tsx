@@ -31,7 +31,7 @@ const DocumentsPage: React.FC = () => {
         </div>
         <div className="dropdown-section">
           <button className="dropdown-btn">
-            Drop down menu
+            MS-QMS Publication
           </button>
         </div>
       </nav>

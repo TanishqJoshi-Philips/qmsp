@@ -195,7 +195,8 @@ body {
   box-shadow: var(--shadow);
   display: flex;
   align-items: center;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-start;
   font-size: 16px;
   color: var(--text-dark);
   font-weight: 500;
@@ -304,7 +305,6 @@ body {
     font-size: 14px;
   }
 }
-/* Add these styles to your existing ProcessesPage.css */
 
 /* Sidebar Navigation */
 .sidebar-nav {
@@ -376,7 +376,7 @@ body {
 
 /* Process Cards as Buttons */
 .process-card {
-  background: var(--white);
+  background: rgba(211, 211, 211, 0.395);
   border: 2px solid var(--border-light);
   border-radius: 12px;
   box-shadow: var(--shadow);
@@ -414,7 +414,7 @@ body {
   top: 0;
   left: 0;
   right: 0;
-  height: 4px;
+  height: 13px;
   background: linear-gradient(90deg, var(--primary-blue), var(--primary-blue-light));
 }
 

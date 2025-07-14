@@ -3,10 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import HomePage from './components/HomePage';
 import ProcessesPage from './components/ProcessesPage'; 
 import DocumentsPage from './components/DocumentsPage';
-
-const FavoritesPage: React.FC = () => (
-<div style={{ padding: 40 }}>My Favorites Page</div>
-);
+import FavoritesPage from './components/FavoritesPage';
  
 const TasksPage: React.FC = () => (
 <div style={{ padding: 40 }}>My Tasks Page</div>

@@ -4,13 +4,12 @@ import HomePage from './components/HomePage';
 import ProcessesPage from './components/ProcessesPage'; 
 import DocumentsPage from './components/DocumentsPage';
 import FavoritesPage from './components/FavoritesPage';
- 
-const TasksPage: React.FC = () => (
-<div style={{ padding: 40 }}>My Tasks Page</div>
-);
+import { FavoritesProvider } from './contexts/FavoritesContext';
+import TasksPage from './components/TasksPage';
  
 const App: React.FC = () => {
   return (
+    <FavoritesProvider>
 <BrowserRouter>
 <Routes>
 <Route path="/" element={<HomePage />} />
@@ -20,6 +19,7 @@ const App: React.FC = () => {
 <Route path="/tasks" element={<TasksPage />} />
 </Routes>
 </BrowserRouter>
+</FavoritesProvider>
   );
 };
  

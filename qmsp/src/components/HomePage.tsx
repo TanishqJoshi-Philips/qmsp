@@ -74,7 +74,7 @@ const HomePage: React.FC = () => {
                     {/* Bottom Section */}
                     <div className="bottom-section">
                         <div className="feature-box">
-                            <span><h2>Op. Model</h2><br/>
+                            <span><h2>Philips Operating Model</h2><br/>
                                 The Philips Operating Model is intended to create a shared understanding of Philips’ ways of working so we can deliver on our purpose: improving people’s health and well-being through innovation. And do so responsibly and sustainable, ensuring patient safety, quality, compliance, and integrity in everything we do. Our operating model is designed to drive accountability and agility, based on the following fundamentals:
 
                                 We serve our customers and consumers with patient safety and quality at the core of everything we do
@@ -85,7 +85,7 @@ const HomePage: React.FC = () => {
                                 The operating model integrates five organizational elements. We ensure alignment of the elements ​ to deliver on our strategic objectives, with clear accountability to drive flawless execution.</span>
                         </div>
                         <div className="feature-box">
-                            <span><h2>BPM</h2><br/>Business Process Management (BPM) is a management approach used for describing, controlling, modeling, and optimizing business processes. Business Process Management builds a bridge between various business processes and forms the basis for organizational and information-technological initiatives aiming at improving the value-added chain within Philips and between Philips and its suppliers.
+                            <span><h2>Business Process Management</h2><br/>Business Process Management (BPM) is a management approach used for describing, controlling, modeling, and optimizing business processes. Business Process Management builds a bridge between various business processes and forms the basis for organizational and information-technological initiatives aiming at improving the value-added chain within Philips and between Philips and its suppliers.
 
                                 Steps in Business Process Management (BPM):
                                 Design and Model: Identification of to-be and existing processes and preparation of the theoretical design of those process based on the "Process Framework design convention guideline", using the "Business Process Management Policy". Modeling of designed processes, using the "Philips Business Process Modelling Notation (BPMN)"

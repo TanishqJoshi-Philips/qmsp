@@ -443,3 +443,89 @@ body {
 span{
     text-align: left;
   }
+/* Add these styles to your existing ProcessesPage.css */
+
+/* Favorite Button Styles */
+.favorite-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #64748b;
+  transition: all 0.2s ease;
+  padding: 4px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.favorite-btn:hover {
+  color: #fbbf24;
+  background: rgba(251, 191, 36, 0.1);
+  transform: scale(1.1);
+}
+
+.favorite-btn.active {
+  color: #fbbf24;
+}
+
+.favorite-btn.active:hover {
+  color: #f59e0b;
+}
+
+/* Update process card to be relative for absolute positioning */
+.process-card {
+  position: relative;
+  background: rgba(211, 211, 211, 0.395);
+  border: 2px solid var(--border-light);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  color: var(--text-dark);
+  font-weight: 500;
+  min-height: 100px;
+  padding: 16px;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  overflow: hidden;
+  width: 100%;
+}
+
+.process-card:hover {
+  border-color: var(--primary-blue);
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-4px);
+  background: var(--hover-blue);
+  color: var(--primary-blue);
+}
+
+.process-card:active {
+  transform: translateY(-2px);
+}
+
+.process-card:hover::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 13px;
+  background: linear-gradient(90deg, var(--primary-blue), var(--primary-blue-light));
+}
+
+/* Ensure star button stays visible on hover */
+.process-card:hover .favorite-btn {
+  color: #fbbf24;
+}
+
+.process-card:hover .favorite-btn.active {
+  color: #f59e0b;
+}
